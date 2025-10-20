@@ -15,7 +15,6 @@ I spend my time designing next-generation software — from AI frameworks to ent
 - 💾 Creator of **MominOS** — a new AI-powered operating system built from scratch in **NASM** and **C**.
 - 💬 Working on **EventConnect** — a social event platform with Apple-level design and real-time Supabase integration.
 - 💧 Built **CustomHydration** — a stylish, customizable hydration e-commerce app with Supabase auth and animations.
-- 🍬 I also run a small business called **Best Sweets** in Tampere (yes, with a real hygiene passport and business ID).
 
 ---
 
