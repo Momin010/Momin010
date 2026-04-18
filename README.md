@@ -1,94 +1,58 @@
-<h1 align="center">👋 Hey there, I'm <strong>Momin Aldahdouh</strong></h1>
+# Momin Aldahdouh
 
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&size=24&duration=3500&pause=1000&color=00D1FF&center=true&vCenter=true&width=600&lines=Self-Taught+Developer;AI+and+OS+Engineer;Building+MominAI+and+MominOS;Turning+ideas+into+code+💻" alt="Typing SVG" />
-</p>
+15 · Tampere, Finland · CTO & Co-founder @ [MowisAI](https://mowisai.com)
 
----
-
-### 🧠 About Me
-
-I'm **Momin Aldahdouh**, a **15-year-old developer** from **Tampere, Finland** who’s obsessed with building real, working systems from scratch.  
-I spend my time designing next-generation software — from AI frameworks to entire operating systems — and learning everything about how computers, intelligence, and user experiences truly work.
-
-- 🚀 Founder of **MominAI** — an AI that turns text directly into full working apps.
-- 💾 Creator of **MominOS** — a new AI-powered operating system built from scratch in **NASM** and **C**.
-- 💬 Working on **EventConnect** — a social event platform with Apple-level design and real-time Supabase integration.
-- 💧 Built **CustomHydration** — a stylish, customizable hydration e-commerce app with Supabase auth and animations.
+Self-taught since 12. I build systems — not apps that wrap APIs.  
+Currently: AI agent infrastructure in Rust. Previously: OS dev in NASM/C.
 
 ---
 
-### 🧩 Current Major Projects
+## MowisAI
 
-| Project | Description | Tech Stack |
-|----------|--------------|------------|
-| 🧠 **MominAI** | A next-gen AI that can instantly generate full working apps, not just code snippets. | React, Node.js, TypeScript, Supabase, HuggingFace API, Vercel |
-| 💽 **MominOS** | My own operating system built from scratch — bootloader, kernel, and eventually an AI-native shell. | NASM, GCC, QEMU, C, Assembly |
-| 🎟️ **EventConnect** | A beautiful social platform for discovering, creating, and managing events. | React Native, Supabase, Framer Motion, TypeScript |
-| 💧 **CustomHydration** | A full e-commerce experience with Supabase auth, cart, checkout, and stylish overlays. | React + Vite, Tailwind CSS, Framer Motion, Supabase |
-| 📈 **Traidx (WIP)** | An investment learning simulator that teaches financial literacy through interactive modules. | React, Supabase, Recharts, Framer Motion |
+> On-premises AI agent infrastructure. Run thousands of isolated agents in parallel on your own hardware.
 
----
+Most agent frameworks coordinate. Most sandboxes execute. MowisAI does both — on your infrastructure, not ours.
 
-### ⚙️ Technologies & Tools
+**Core engine** (`mowisai` binary):
+- Overlayfs/chroot/cgroups sandboxing — each agent gets an isolated filesystem layer
+- Unix socket server with JSON-RPC protocol
+- 75 built-in tools across 14 categories
+- 7-layer orchestration: planner → hub agents → workers, event-driven scheduling
+- 67 tests passing, clean `cargo build`
 
-#### 💻 Languages
-`TypeScript` · `JavaScript` · `Python` · `C` · `C++` · `NASM Assembly` · `HTML` · `CSS`
+**Stack:** Rust · Linux kernel APIs · overlayfs · cgroups · Vertex AI Gemini 2.5 Pro · GCP  
+**Target:** Developers and enterprises that need massive, complex agent workflows — fully sovereign.
 
-#### 🧰 Frameworks & Libraries
-`React` · `Next.js` · `React Native` · `Vite` · `Framer Motion` · `Supabase` · `Tailwind CSS`
-
-#### 🧠 AI & Backend
-`OpenAI API` · `HuggingFace` · `PostgreSQL` · `Node.js` · `Supabase Auth` · `OAuth (Google)`
-
-#### 🖥️ Tools & Systems
-`GitHub` · `Vercel` · `Netlify` · `QEMU` · `VMware` · `WSL2` · `Linux` · `VS Code`
+→ [github.com/Momin010/MowisAI](https://github.com/Momin010/MowisAI) · [mowisai.com](https://mowisai.com)
 
 ---
 
-### 🏆 Achievements
+## MominOS
 
-- 🦈 **Pull Shark** — for actively contributing to open-source projects  
-- 🔥 Over **1,400+ contributions** in the past year  
-- 🧩 Maintainer of multiple high-activity repos including **MominAI**, **MominOS**, and **EventConnect**  
-- 💼 Business owner with real-world products and sales in Finland  
+> 64-bit x86_64 OS built from scratch in assembly — real mode to long mode.
 
----
+Transitions from 16-bit Real Mode through GDT and 4-level paging into 64-bit Long Mode. Micro-kernel with a working interactive shell.
 
-### 📊 GitHub Stats
+**What's implemented:**
+- Stage 1 MBR bootloader + Stage 2 loader (A20, GDT, paging, long mode jump)
+- 64-bit micro-kernel with full IDT — all 32 CPU exceptions handled
+- Scrolling VGA driver + keyboard driver
+- Functional CLI shell
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Momin010&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
-</p>
+**Stack:** NASM · QEMU · Assembly (89%) · x86_64
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Momin010&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Momin010&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-</p>
+→ [github.com/Momin010/MominOS](https://github.com/Momin010/MominOS)
 
 ---
 
-### 🧭 Goals for 2026
+## Stack
 
-- 🧩 Finish **MominOS kernel and protected mode**  
-- 🧠 Launch **MominAI Public Beta** with app generation  
-- 📱 Publish **EventConnect** on mobile (App Store + Play Store)  
-- 🏗️ Reach **10K GitHub stars** across all repositories  
-- 💶 Make **€1,000,000 before 17** through innovation, coding, and business
+**Systems:** Rust · C · NASM Assembly · Linux internals  
+**Web/App:** TypeScript · React · Node.js · Supabase  
+**Infra:** GCP · Vercel · overlayfs · cgroups · Unix sockets  
 
 ---
 
-### 🌐 Connect with Me
+## Contact
 
-<p align="center">
-  <a href="https://github.com/Momin010" target="_blank"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" /></a>
-  <a href="mailto:momin.business@outlook.com" target="_blank"><img src="https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" /></a>
-  <a href="https://www.instagram.com/" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
-</p>
-
----
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00D1FF,100:2B2D42&height=120&section=footer"/>
-</p>
-
+[momin.aldahdooh@mowisai.com](mailto:momin.aldahdooh@mowisai.com) · [mowisai.com](https://mowisai.com)
